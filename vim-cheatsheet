@@ -1,0 +1,78 @@
+Modes:
+- i - insert mode before cursor
+- shift + i - insert mode at the start of the line
+- a - insert mode after cursor
+- shift + a - insert mode at the end of the line
+- o - insert mode one line below
+- shift + o - insert mode one line above
+- v - visual mode
+- shift + v - visual line mode - select full line
+- ctrl + v - visual block mode - select columnn in line
+
+In command/normal mode:
+- esc - reset the command sequence
+- gg - go to the begining of the file
+- shift + g - go to the end of the file
+- :<line> or <line> + shift + g - jump to line
+- 0 - go to the beginning of the line 
+- ^ - go to the first word in the line. Similar to 0w.
+- $ - go to the end of the line
+- { or } - go up and down in blocks of code
+- 5 + <command> - do the comment 5 times
+- u - undo
+- ctrl + r - redo
+- x - delete the char at the current position
+- dd - delete line and copy it (not yanked)
+- cc - delete line content but keep editing it in insert mode
+- shift + d - delete after the cursor (including cursor position)
+- shift + c - delete after the cursor (including cursor position) but keep editing it in insert mode
+- yy - yanke line
+- shift + y - yanke line (same as yy)
+- r - replace character unnder cursor
+- p - insert yanked text after cursor if yanked words or below line if yanked full line
+- shift + p - insert yanked text before cursor if yanked words or above line if yanked full line
+- w - jump to the beginning of the next word separated by space or special character
+- shift + w - jump to the beginning of the next word separated by space
+- b - jump to the beginning of the previous word separated by space of special character
+- shift + b - jump to the beginning of the previous word separated by space
+- e - junnp to the end of a word
+- d + w - delete a word if we are in the beginning of it. This works with other commands besides w in the same way
+- d + i + w - delete in a word. Delete the entire word even if we're in the middle of it
+- c + i + " - change inner quotation mark
+- % - jump to closing/openninng bracket
+- t + <char> - jump to the position before the next <char>
+- shift + t + <char> - jump to the position after the previous <char>
+- f + <char> - jump to the position of the next <char>
+- shift + f + <char> - jump to the position of the previous <char>
+- ; - repeat the last 't' or 'f' commands
+- >> - indent
+- << - unindent
+- == - auto indent
+- /<string> - search.
+    - n - jump to next
+    - shift + n - jump to previous
+- ?<string> - search upwards.
+    - n - jump to next (previous in the file)
+    - shift + n - jemp to previous (next in the file)
+- * on a word - go to next occurrence of the same word
+- # on a word - go to previous occurrence of the same word
+- zz - center the current line to be in the middle of the window
+- m + <char> - mark a line
+- ' + <char> - go to a line that was marked using the previous command
+- : + % (full file) + s (substitute) + /<orginial>/<replace_to>/g - replace a string in all file
+- . - repeat the last command e.g. 3dw + . will redo 3dw
+- :reg - see all registers
+- " + <reg number> + p - paste a certain register
+- " + + - the clipboard
+- " + 0 - last yanked
+- q + <char> - start recording a macro
+    - q - exit macro recording
+    - @ + <char> - run macro
+- ~ - swap the case of the character - lower to upper or upper to lower
+
+In visual mode:
+- d - delete selected and copy it (not yank)
+- y - copy selected (yanking)
+- > - indent line of selected
+- < - unindent line of selected
+- = - autoindent
